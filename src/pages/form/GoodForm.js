@@ -1,17 +1,17 @@
 import React from "react";
-import "./form.modules.css";
+import styles from "./form.module.css";
 
 function BadFormPage() {
   const onHandleSubmit = (e) => {
     e.preventDefault();
   };
   return (
-    <main className="section">
+    <main className={styles.section}>
       <h1>Personal Details Form:</h1>
-      <form className="form" onSubmit={onHandleSubmit}>
+      <form className={styles.form} onSubmit={onHandleSubmit}>
         <label htmlFor="firstname">First Name (required): </label>
         <input
-          className="input"
+          className={styles.input}
           id="firstname"
           type="text"
           required
@@ -21,7 +21,7 @@ function BadFormPage() {
 
         <label htmlFor="lastname">Last Name (required): </label>
         <input
-          className="input"
+          className={styles.input}
           id="lastname"
           type="text"
           required
@@ -31,7 +31,7 @@ function BadFormPage() {
 
         <label htmlFor="email">Email (required): </label>
         <input
-          className="input"
+          className={styles.input}
           type="email"
           id="email"
           required
@@ -41,7 +41,7 @@ function BadFormPage() {
 
         <label htmlFor="location">Location (required): </label>
         <input
-          className="input"
+          className={styles.input}
           type="location"
           id="location"
           aria-describedby="location-description"

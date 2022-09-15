@@ -1,36 +1,36 @@
 import React from "react";
-import "./semantic.modules.css";
+import styles from "./semantic.module.css";
 
 function GoodSemanticPage() {
   return (
     <>
-      <header className="header">
+      <header className={styles.header}>
         <nav>
-          <ul className="navigation">
-            <li className="list">
-              <a className="link" href="/">
+          <ul className={styles.navigation}>
+            <li className={styles.list}>
+              <a className={styles.link} href="/">
                 Home
               </a>
             </li>
-            <li className="list">
-              <a className="link" href="/about">
+            <li className={styles.list}>
+              <a className={styles.link} href="/about">
                 About
               </a>
             </li>
-            <li className="list">
-              <a className="link" href="/contact">
+            <li className={styles.list}>
+              <a className={styles.link} href="/contact">
                 Contact Us
               </a>
             </li>
           </ul>
         </nav>
       </header>
-      <main className="main">
-        <h1 className="h1">Web Accessibility Tutorial Articles</h1>
+      <main className={styles.main}>
+        <h1 className={styles.h1}>Web Accessibility Tutorial Articles</h1>
 
-        <article className="article">
-          <h2 className="h2">First Article</h2>
-          <p className="paragraph">
+        <article className={styles.article}>
+          <h2 className={styles.h2}>First Article</h2>
+          <p className={styles.paragraph}>
             When websites and web tools are properly designed and coded, people
             with disabilities can use them. However, currently many sites and
             tools are developed with accessibility barriers that make them
@@ -39,9 +39,9 @@ function GoodSemanticPage() {
           </p>
         </article>
 
-        <article className="article">
-          <h2 className="h2">Second Article</h2>
-          <p className="paragraph">
+        <article className={styles.article}>
+          <h2 className={styles.h2}>Second Article</h2>
+          <p className={styles.paragraph}>
             The Web is fundamentally designed to work for all people, whatever
             their hardware, software, language, location, or ability. When the
             Web meets this goal, it is accessible to people with a diverse range
@@ -49,9 +49,9 @@ function GoodSemanticPage() {
           </p>
         </article>
 
-        <article className="article">
-          <h2 className="h2">Third Article</h2>
-          <p className="paragraph">
+        <article className={styles.article}>
+          <h2 className={styles.h2}>Third Article</h2>
+          <p className={styles.paragraph}>
             when websites, applications, technologies, or tools are badly
             designed, they can create barriers that exclude people from using
             the Web. Accessibility is essential for developers and organizations
@@ -60,11 +60,11 @@ function GoodSemanticPage() {
           </p>
         </article>
 
-        <div className="button-section">
-          <button className="button">Access Course</button>
+        <div className={styles["button-section"]}>
+          <button className={styles.button}>Access Course</button>
         </div>
       </main>
-      <footer className="footer">Footer</footer>
+      <footer className={styles.footer}>Footer</footer>
     </>
   );
 }
