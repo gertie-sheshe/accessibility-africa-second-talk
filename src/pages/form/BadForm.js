@@ -6,7 +6,7 @@ function BadFormPage() {
     e.preventDefault();
   };
   return (
-    <div className="section">
+    <div className={styles.section}>
       <h1>Personal Details Form:</h1>
       <form className={styles.form} onSubmit={onHandleSubmit}>
         <input

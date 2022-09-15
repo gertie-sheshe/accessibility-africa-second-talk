@@ -1,15 +1,15 @@
 .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  /* display: flex;
+  flex-direction: column; */
+  /* align-items: center; */
+  width: 400px;
   
 }
 
 .input {
   width: 100%;
   max-width: 400px;
-  margin: 0 0 20px;
+  margin: 5px 0 5px 0;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -41,6 +41,10 @@ button {
   box-sizing: border-box;
   background-color: #fff;
   cursor: pointer;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 button:hover {
