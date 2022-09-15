@@ -35,8 +35,7 @@ function GoodSemanticPage() {
             with disabilities can use them. However, currently many sites and
             tools are developed with accessibility barriers that make them
             difficult or impossible for some people to use. Making the web
-            accessible benefits individuals, businesses, and society.
-            International web standards define what is needed for accessibility.
+            accessible benefits individuals, businesses, and society
           </p>
         </article>
 
