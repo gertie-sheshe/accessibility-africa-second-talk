@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./semantic.module.css";
 
 function BadSemanticPage() {
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError(true);
+    console.log("Form submitted");
+  };
   return (
     <>
       <div className={styles.header}>
         <div className={styles.navigation}>
-          <div className={styles.link}>Home</div>
-          <div className={styles.link}>About</div>
-          <div className={styles.link}>Contact Us</div>
+          <div className={styles.link} tabIndex={0}>
+            Home
+          </div>
+          <div className={styles.link} tabIndex={1}>
+            About
+          </div>
+          <div className={styles.link} tabIndex={2}>
+            Contact Us
+          </div>
         </div>
       </div>
       <div className={styles.main}>
@@ -47,8 +60,19 @@ function BadSemanticPage() {
         </div>
 
         <div className={styles["button-section"]}>
-          <div className={styles.button}>Access Course</div>
+          <div className={styles.button} tabIndex={3}>
+            Access Course
+          </div>
         </div>
+
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <p>Fill form to subscribe: </p>
+          <input
+            className={error ? styles.inputError : styles.input}
+            placeholder="Email e.g test@me.com"
+          />
+          <button className={styles.button}>Subscribe</button>
+        </form>
       </div>
       <div className={styles.footer}>Footer</div>
     </>
