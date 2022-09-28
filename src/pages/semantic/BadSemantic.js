@@ -16,10 +16,10 @@ function BadSemanticPage() {
           <div className={styles.link} tabIndex={0}>
             Home
           </div>
-          <div className={styles.link} tabIndex={1}>
+          <div className={styles.link} tabIndex={0}>
             About
           </div>
-          <div className={styles.link} tabIndex={2}>
+          <div className={styles.link} tabIndex={0}>
             Contact Us
           </div>
         </div>
@@ -60,18 +60,18 @@ function BadSemanticPage() {
         </div>
 
         <div className={styles["button-section"]}>
-          <div className={styles.button} tabIndex={3}>
+          <div className={styles.button} tabIndex={0}>
             Access Course
           </div>
         </div>
 
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form className={`${styles.form} form`} onSubmit={handleSubmit}>
           <p>Fill form to subscribe: </p>
           <input
             className={error ? styles.inputError : styles.input}
             placeholder="Email e.g test@me.com"
           />
-          <button className={styles.button}>Subscribe</button>
+          <button className={`${styles.button} button`}>Subscribe</button>
         </form>
       </div>
       <div className={styles.footer}>Footer</div>
