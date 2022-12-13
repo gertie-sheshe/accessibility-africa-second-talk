@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./semantic.module.css";
 
 function BadSemanticPage() {
+  const [error, setError] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError(true);
+    console.log("Form submitted");
+  };
   return (
     <>
       <div className={styles.header}>
@@ -49,6 +56,15 @@ function BadSemanticPage() {
         <div className={styles["button-section"]}>
           <div className={styles.button}>Access Course</div>
         </div>
+
+        <form className={`${styles.form} form`} onSubmit={handleSubmit}>
+          <p>Fill form to subscribe: </p>
+          <input
+            className={error ? styles.inputError : styles.input}
+            placeholder="Email e.g test@me.com"
+          />
+          <button className={`${styles.button} button`}>Subscribe</button>
+        </form>
       </div>
       <div className={styles.footer}>Footer</div>
     </>
